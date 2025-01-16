@@ -22,9 +22,13 @@
       <button @click="addGoal">Add Goal</button>
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <ul v-else>
-        <li>Goal</li>
+        <li v-for="goal in goals">{{ goal }}</li>
       </ul>
       <p v-show="goals.length > 0">Koniec listy</p>
+
+      <p v-for="goal in goals">
+        <span>CEL: {{ goal }}</span>
+      </p>
     </section>
   </body>
 </html>

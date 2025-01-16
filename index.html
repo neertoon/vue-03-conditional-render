@@ -26,8 +26,8 @@
       </ul>
       <p v-show="goals.length > 0">Koniec listy</p>
 
-      <p v-for="goal in goals">
-        <span>CEL: {{ goal }}</span>
+      <p v-for="(goal, index) in goals">
+        <span>CEL: {{ goal }} - {{ index }}</span>
       </p>
     </section>
   </body>
